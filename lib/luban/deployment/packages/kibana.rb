@@ -1,0 +1,6 @@
+require 'luban'
+require_relative 'kibana/base'
+require_relative 'kibana/installer'
+require_relative 'kibana/controller'
+require_relative 'kibana/configurator'
+require_relative 'kibana/version'
