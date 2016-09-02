@@ -8,8 +8,8 @@ module Luban
               base.define_executable 'kibana'
             end
 
-            def compose_command(cmd)
-              "#{shell_setup_commands.join('; ')}; #{cmd}"
+            def shell_command_output
+              @shell_command_output ||= ''
             end
 
             def process_pattern
