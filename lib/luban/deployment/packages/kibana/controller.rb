@@ -8,20 +8,17 @@ module Luban
               base.define_executable 'kibana'
             end
 
-            def shell_command_output
-              @shell_command_output ||= ''
-            end
-
             def process_pattern
               @process_pattern ||= "#{control_file_path}$"
             end
 
             def start_command
-              @start_command ||= "#{kibana_executable} -c #{control_file_path} >/dev/null 2>&1 &"
+              #@start_command ||= shell_command("#{kibana_executable} -c #{control_file_path}")
+              @start_command ||= shell_command("#{kibana_executable} -c #{control_file_path}", output: nil) + ' &'
             end
 
             def stop_command
-              @stop_command ||= "kill $(cat #{pid_file_path} 2>/dev/null) 2>&1"
+              @stop_command ||= shell_command("kill $(cat #{pid_file_path} 2>/dev/null)")
             end
           end
 
