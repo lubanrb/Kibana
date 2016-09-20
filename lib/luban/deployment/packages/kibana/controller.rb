@@ -13,7 +13,6 @@ module Luban
             end
 
             def start_command
-              #@start_command ||= shell_command("#{kibana_executable} -c #{control_file_path}")
               @start_command ||= shell_command("#{kibana_executable} -c #{control_file_path}", output: nil) + ' &'
             end
 
