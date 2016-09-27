@@ -34,9 +34,9 @@ module Luban
           default_templates_paths.unshift(base_templates_path(__FILE__))
         end
 
-        def setup_install_tasks
+        def setup_provision_tasks
           super
-          commands[:install].option :dist, "Binary distribution"
+          provision_tasks[:install].option :dist, "Binary distribution"
         end
       end
     end
