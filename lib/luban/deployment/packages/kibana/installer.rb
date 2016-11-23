@@ -24,11 +24,6 @@ module Luban
 
           protected
 
-          def init
-            super
-            linked_files.push('kibana.yml')
-          end
-
           def build_package
             info "Building #{package_full_name}"
             within install_path do
