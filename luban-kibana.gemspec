@@ -5,7 +5,7 @@ require 'luban/deployment/packages/kibana/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "luban-kibana"
-  spec.version       = Luban::Deployment::Packages::Kibana::VERSION
+  spec.version       = Luban::Deployment::Packages::KIBANA_VERSION
   spec.authors       = ["Rubyist Chi"]
   spec.email         = ["rubyist.chi@gmail.com"]
 
