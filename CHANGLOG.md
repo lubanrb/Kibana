@@ -1,5 +1,10 @@
 # Change log
 
+## Version 0.1.10 (Nov 29, 2016)
+
+Bug fixes:
+  * Cleaned up install path before installation
+
 ## Version 0.1.9 (Nov 27, 2016)
 
 Minor enhancements:
